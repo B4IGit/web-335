@@ -1,0 +1,24 @@
+{
+    "CUSTOMER": {
+        "customer_id": "customer-1",
+        "firstName": "Devin",
+        "lastName": "Ledesma",
+        "orders": [
+            {
+                "burger_id": "burger-1",
+                "burgerName": "Double Cheeseburger",
+                "price": 16.99
+            },
+            {
+                "burger_id": "burger-2",
+                "burgerName": "Mushroom & Swiss",
+                "price": 14.49
+            },
+            {
+                "burger_id": "burger-3",
+                "burgerName": "Double Jalapeno & Cheddar",
+                "price": 16.49
+            }
+        ]
+    }
+}
