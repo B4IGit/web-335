@@ -1,0 +1,51 @@
+{
+  "VIEWERS": [
+    {
+      "viewer_id": 1,
+      "firstName": "Devin",
+      "lastName": "Ledesma",
+      "ratings": [
+        {
+          "rating_id": 100,
+          "ratingScore": 4.8,
+          "viewer_id": 1,
+          "movie_id": 500,
+          "movies": {
+            "movie_id": 500,
+            "movieName": "How to Train Your Dragon",
+            "genre": "Animation"
+          }
+        },
+        {
+          "rating_id": 101,
+          "ratingScore": 5,
+          "viewer_id": 1,
+          "movie_id": 501,
+          "movies": {
+            "movie_id": 501,
+            "movieName": "Lilo & Stitch",
+            "genre": "Adventure"
+          }
+        }
+      ]
+    },
+    {
+      "viewer_id": 2,
+      "firstName": "Burnt",
+      "lastName": "Toast",
+      "ratings": [
+        {
+          "rating_id": 156,
+          "ratingScore": 4.3,
+          "viewer_id": 2,
+          "movie_id": 223,
+          "movies": {
+            "movie_id": 223,
+            "movieName": "Flow",
+            "genre": "Fantasy"
+          }
+        }
+      ]
+    }
+  ]
+}
