@@ -1,7 +1,7 @@
 """
-Author: Devin Ledesma
-Date: 06/23/2025
-File Name: ledesma_lemonadeStand.py
+Author:      Devin Ledesma
+Date:        06/23/2025
+File Name:   ledesma_lemonadeStand.py
 Description: The file calculates the cost of making lemonade and the profit from selling it.
 """
 
