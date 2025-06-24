@@ -1,0 +1,47 @@
+{
+  "users": [
+    {
+      "user_id": "u100",
+      "firstName": "Devin",
+      "lastName": "Ledesma"
+    },
+    {
+      "user_id": "u101",
+      "firstName": "Burnt",
+      "lastName": "Toast"
+    }
+  ],
+  "chargers": [
+    {
+      "charger_id": "c200",
+      "chargerType": "USB 2.0",
+      "voltage": 5
+    },
+    {
+      "charger_id": "c201",
+      "chargerType": "USB-C (non-PD)",
+      "voltage": 5
+    },
+    {
+      "charger_id": "c202",
+      "chargerType": "USB-C (PD)",
+      "voltage": 48
+    }
+  ],
+  "devices": [
+    {
+      "device_id": "d300",
+      "deviceName": "iPhone 13 Pro Max",
+      "deviceType": "Smartphone",
+      "user_id": "u100",
+      "charger_id": "c202"
+    },
+    {
+      "device_id": "d301",
+      "deviceName": "Google Pixel",
+      "deviceType": "Smartphone",
+      "user_id": "u101",
+      "charger_id": "c201"
+    }
+  ]
+}
