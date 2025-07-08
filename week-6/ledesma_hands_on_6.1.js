@@ -5,6 +5,9 @@ File Name:      ledesma_hands_on_6.1.js
 Description:    This file demonstrates that I can perform various operations such as aggregation with the houses.js file
 */
 
+// Connection string
+MONGODB_URI = mongosh "mongodb+srv://bellevueuniversity.dlgzebu.mongodb.net/" --apiVersion 1 --username web335_user;
+
 // Load
 load("houses.js")
 
