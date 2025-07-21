@@ -1,0 +1,61 @@
+{
+  "books": [
+    {
+      "bookId": "b101",
+      "title": "Mexican Gothic",
+      "author": "Silvia Moreno-Garcia",
+      "genre": "Horror"
+    },
+    {
+      "bookId": "b102",
+      "title": "Project Hail Mary",
+      "author": "Andy Weir",
+      "genre": "Science-Fiction"
+    },
+    {
+      "bookId": "b103",
+      "title": "The Secret History",
+      "author": "Donna Tartt",
+      "genre": "Psychological Thriller"
+    },
+    {
+      "bookId": "b104",
+      "title": "A Man Called Ove",
+      "author": "Fredrick Backman",
+      "genre": "Humor"
+    },
+    {
+      "bookId": "b105",
+      "title": "Braiding Sweetgrass",
+      "author": "Robin Wall Kimmerer",
+      "genre": "Non-Fiction"
+    }
+  ],
+  "customers": [
+    {
+      "customerId": "c201",
+      "firstName": "Brad",
+      "lastName": "Wenlock"
+    },
+    {
+      "customerId": "c202",
+      "firstName": "Sarah",
+      "lastName": "Gold"
+    },
+    {
+      "customerId": "c203",
+      "firstName": "Ryan",
+      "lastName": "Kitten"
+    }
+  ],
+  "wishlistitems": [
+    {
+      "customerId": "c201",
+      "bookId": ["b101", "b103", "b104"]
+    },
+    {
+      "customerId": "c202",
+      "bookId": ["b102", "b105"]
+    }
+  ]
+}
