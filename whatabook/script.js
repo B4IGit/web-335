@@ -49,7 +49,7 @@ db.createCollection('wishlistitems', {
             required: ["customerId", "bookId"],
             properties: {
                 customerId: { bsonType: "string" },
-                bookId: { bsonType: "string" }
+                bookId: { bsonType: "array" }
             }
         }
     }
@@ -101,19 +101,19 @@ db.books.insertOne(sweetgrass)
 
 // Customers
 wenlock = {
-    customerId: "c201",
+    customerId: "c1007",
     firstName: "Brad",
     lastName: "Wenlock"
 };
 
 gold = {
-    customerId: "c202",
+    customerId: "c1008",
     firstName: "Sarah",
     lastName: "Gold"
 };
 
 kitten = {
-    customerId: "c203",
+    customerId: "c1009",
     firstName: "Ryan",
     lastName: "Kitten"
 };
@@ -125,12 +125,12 @@ db.customers.insertOne(kitten)
 
 // Customer wishlists
 wenlockWishlist = {
-    customerId: "c201",
+    customerId: "c1007",
     bookId: ["b101", "b103", "b104"]
 };
 
 goldWishlist = {
-    customerId: "c202",
+    customerId: "c1008",
     bookId: ["b102", "b105"]
 }
 
