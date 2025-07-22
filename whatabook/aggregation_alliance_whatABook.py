@@ -34,12 +34,35 @@ for customer in db.customers.find({},{'firstName': 1, 'lastName': 1}):
 # Add line break
 print()
 
-# Display books from 'books' collection
-print('List of Books')
-for book in db.books.find():
+# Formats books
+def format_books(book):
+    print() # line break
     print('Title:', book.get('title'))
     print('Author:', book.get('author'))
     print('Genre:', book.get('genre'))
     print('Book ID:', book.get('bookId'))
     print() # line break
     print('--------------------------') # line separation
+
+# Display books from 'books' collection
+print('List all Books')
+for book in db.books.find():
+    format_books(book)
+
+# List books by genre (supplies users with choices)
+    # installed inquirer using pip (stack overflow)
+list_genres = [
+    inquirer.List('genre_options',
+        message = 'Please choose from the following genres.',
+        choices = [
+            'Horror', 'Science-Fiction', 'Psychological Thriller', 'Humor', 'Non-Fiction'
+        ]
+    ),
+]
+answers = inquirer.prompt(list_genres)
+selected_genre = answers['genre_options']
+
+# Filters the list of books based on the selected genre
+print('List of Books by Genre')
+for book in db.books.find({'genre': selected_genre}):
+    format_books(book)
