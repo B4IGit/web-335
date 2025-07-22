@@ -1,8 +1,8 @@
 /*
-Title: queries.js
+Title: aggregation_alliance_whatABook.js
 Author: Devin Ledesma, Riley Bird
 Date: 07/18/2025
-Description: MongoDB shell scripts for WhatABook.
+Description: Queries to showcase the functionality of whatABook's application.
 */
 
 // Load script.js
@@ -23,4 +23,10 @@ db.books.aggregate([
 
 //Query to display a book by bookId
 db.books.findOne({ bookId: "b101" });
+
+// Query to display wishlist by customerId
+
+// Query to add book(s) to customer's wishlist
+
+// Remove book(s) from a customer's wishlist
 
