@@ -1,5 +1,5 @@
 /*
-Title: whatabook.js
+Title: script.js
 Author: Devin Ledesma, Riley Bird
 Date: 07/17/2025
 Description: MongoDB shell scripts for WhatABook.
