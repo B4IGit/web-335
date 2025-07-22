@@ -8,7 +8,8 @@ Description: This is a simple application for whatABook. It allows customers to 
 """
 Resources Used:
     https://stackoverflow.com/questions/37565793/how-to-let-the-user-select-an-input-from-a-finite-list
-
+    https://python-inquirer.readthedocs.io/en/latest/usage.html#question-types
+    https://www.w3schools.com/python/ref_string_upper.asp
 """
 
 # Import MongoClient
@@ -66,3 +67,42 @@ selected_genre = answers['genre_options']
 print('List of Books by Genre')
 for book in db.books.find({'genre': selected_genre}):
     format_books(book)
+
+# Display a customer's wishlist by customerId
+    # Add error handing for invalid customerId
+find_customer_by_id = [
+    inquirer.Text('customer_id',
+        message = 'Please enter your customer ID.'
+    ),
+]
+while True:
+    answer = inquirer.prompt(find_customer_by_id)
+    customerId = answer['customer_id']
+
+    # Validates customerId
+    customer = db.customers.find_one({'customerId': customerId})
+
+    if customer:
+        print(f'Welcome, {customer['firstName']} {customer['lastName']}!'.upper())
+
+        print('Your Wishlist:')
+        # Accesses items in wishlist
+        wishlist = db.wishlistitems.find({'customerId': customerId})
+
+        if wishlist:
+            for item in wishlist:
+                # Accesses books in customers wishlist
+                book = db.books.find({'bookId': item['bookId']})
+                #
+                #
+                # NEED TO FIGURE OUT HOW TO IMPORT BOOKS
+                if book:
+                    format_books(book)
+                #
+                #
+                #
+        else:
+            print('No wishlist found.')
+        break # exits loop once a valid ID is entered
+    else:
+        print('Invalid customer ID. Please try again.')
