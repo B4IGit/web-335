@@ -85,24 +85,21 @@ while True:
     if customer:
         print(f'Welcome, {customer['firstName']} {customer['lastName']}!'.upper())
 
-        print('Your Wishlist:')
         # Accesses items in wishlist
-        wishlist = db.wishlistitems.find({'customerId': customerId})
+        wishlist = db.wishlistitems.find_one({'customerId': customerId})
 
-        if wishlist:
-            for item in wishlist:
-                # Accesses books in customers wishlist
-                book = db.books.find({'bookId': item['bookId']})
-                #
-                #
-                # NEED TO FIGURE OUT HOW TO IMPORT BOOKS
-                if book:
-                    format_books(book)
-                #
-                #
-                #
+        if wishlist and 'bookId' in wishlist:
+            print('Your Wishlist:')
+            print() # line break
+
+            for get_books in wishlist['bookId']:
+                books = db.books.find_one({'bookId': get_books})
+                if books:
+                    print(books['title'])
+                else:
+                    print('Wistlist is empty.')
+            break
         else:
             print('No wishlist found.')
-        break # exits loop once a valid ID is entered
     else:
         print('Invalid customer ID. Please try again.')
